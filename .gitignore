@@ -6,7 +6,7 @@ yarn-debug.log*
 yarn-error.log*
 
 # Project specific files and folders
-environment.ts
+# environment.ts
 
 # Runtime data
 pids
