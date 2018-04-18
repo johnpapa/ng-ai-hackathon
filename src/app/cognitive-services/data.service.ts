@@ -167,7 +167,9 @@ export class DataService {
             }
         }
         if (key) {
+            headers.append('Ocp-Apim-Subscription-Key', key);
             headers.append('Prediction-Key', key);
+            
             headersSet = true;
         }
 
