@@ -48,14 +48,20 @@ export const environment = {
     'https://azurecomcdn.azureedge.net/cvt-72608df6b76809061acf15373a0cd185c594a46fa873ad20f9f8e6c1739fa45b/images/shared/cognitive-services-demos/read-text/read-6.jpg'
   ],
   objectImageUrls: [
-    'https://azurecomcdn.azureedge.net/cvt-ada4056a687a0f024d478b2eba03524ad163dd9a6c0853326a5a71276dc4d3c6/images/shared/cognitive-services-demos/analyze-image/analyze-3.jpg',
-    'https://azurecomcdn.azureedge.net/cvt-ada4056a687a0f024d478b2eba03524ad163dd9a6c0853326a5a71276dc4d3c6/images/shared/cognitive-services-demos/analyze-image/analyze-5.jpg',
-    'https://azurecomcdn.azureedge.net/cvt-ada4056a687a0f024d478b2eba03524ad163dd9a6c0853326a5a71276dc4d3c6/images/shared/cognitive-services-demos/analyze-image/analyze-6.jpg',
-    'https://azurecomcdn.azureedge.net/cvt-ada4056a687a0f024d478b2eba03524ad163dd9a6c0853326a5a71276dc4d3c6/images/shared/cognitive-services-demos/analyze-image/analyze-7.jpg',
-    'https://azurecomcdn.azureedge.net/cvt-ada4056a687a0f024d478b2eba03524ad163dd9a6c0853326a5a71276dc4d3c6/images/shared/cognitive-services-demos/analyze-image/analyze-8.jpg',
-    'https://azurecomcdn.azureedge.net/cvt-ada4056a687a0f024d478b2eba03524ad163dd9a6c0853326a5a71276dc4d3c6/images/shared/cognitive-services-demos/analyze-image/analyze-9.jpg',
-    'https://azurecomcdn.azureedge.net/cvt-ada4056a687a0f024d478b2eba03524ad163dd9a6c0853326a5a71276dc4d3c6/images/shared/cognitive-services-demos/analyze-image/analyze-10.jpg',
-    'https://azurecomcdn.azureedge.net/cvt-ada4056a687a0f024d478b2eba03524ad163dd9a6c0853326a5a71276dc4d3c6/images/shared/cognitive-services-demos/analyze-image/analyze-11.jpg',
-    'https://azurecomcdn.azureedge.net/cvt-ada4056a687a0f024d478b2eba03524ad163dd9a6c0853326a5a71276dc4d3c6/images/shared/cognitive-services-demos/analyze-image/analyze-12.jpg'
+    'http://d1466nnw0ex81e.cloudfront.net/n_iv/600/3180776.jpg',
+    'http://vignette.wikia.nocookie.net/spiderman/images/e/ea/Spidey_1.png/revision/latest?cb=20140816173914',
+    'http://www.writeups.org/wp-content/uploads/Superman-Robot-DC-Comics.jpg',
+    'http://img.wennermedia.com/social/rs-239344-chris-evans.jpg',
+    'https://www.wikihow.com/images/8/84/Draw-Wonder-Woman-Step-18.jpg',
+    'https://vignette.wikia.nocookie.net/ironman/images/5/59/Robert-Downey-Jr-Tony-Stark-Iron-Man-3-Marvel-Disney.jpg/revision/latest?cb=20130611164804',
+    'https://i.ytimg.com/vi/4KtJ9pQVLSU/maxresdefault.jpg',
+    'https://vignette.wikia.nocookie.net/deathbattlefanon/images/2/20/C0A9B238-91F6-46AA-ABDC-3FC720228C25.png/revision/latest?cb=20171104014554',
+    'https://pmcvariety.files.wordpress.com/2017/02/spidermanavengersdowney.jpg?w=1000&h=563&crop=1',
+    'https://cdn1.thr.com/sites/default/files/2016/08/batman_begins_2005_bd-6468-h_2016.jpg',
+    'https://static1.cbrimages.com/wp-content/uploads/2017/11/justice-league-ben-affleck-6.jpg?q=35&w=984&h=518&fit=crop',
+    
+    
+    'https://pbs.twimg.com/profile_images/888397702391902208/CupdIngs_400x400.jpg',
+    'http://livekindlyproduction-8u6efaq1lwo6x9a.stackpathdns.com/wp-content/uploads/2017/11/deadpool-2.jpg',
   ]
 };

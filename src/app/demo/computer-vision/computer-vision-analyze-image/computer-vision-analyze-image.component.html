@@ -2,15 +2,13 @@
 </app-hero-banner>
 <div class="container">
     <div class="col-xs-12" (window:resize)="onResize($event)">
-        <div class="row top-padding">
-            <h2>Analyze an Image</h2>
+        <!-- <div class="row top-padding">
+            <h2>Who's that hero?</h2>
         </div>
         <div class="row api-description bottom-padding">
-            Computer vision enables a number of capabilities like understanding the features of user-posted images, identifying people
-            and traits in online content, filtering out inappropriate content, and many more. The Computer Vision API takes
-            an input image and returns information about the content such as a brief description, relevant tags, identified
-            faces, and an adult content flag, among other features.
-        </div>
+            Enter an image URL of a super hero below and we will tell you if the hero is from the DC or Marvel universe, and which hero we think it is...
+        </div> -->
+        <div style="height:20px"></div>
         <div class="alert alert-danger" *ngIf="errorMessage">{{errorMessage}}</div>
         <div class="row">
             <div class="col-xs-12 col-sm-6">
@@ -31,11 +29,11 @@
                         <button class="btn btn-default" type="button" (click)="onInternetUrlSelected()">
                             <span class="glyphicon glyphicon-globe" aria-hidden="true"></span>
                         </button>
-                        <label class="btn btn-default" type="button">
+                        <!-- <label class="btn btn-default" type="button">
                             <span class="glyphicon glyphicon-folder-open"></span>
                             <input type="file" (change)="onFilesSelected($event)" accept="image/bmp,image/jpeg,image/png,image/gif" style="font-size: 50px;width: 120px;opacity: 0;filter:alpha(opacity=0);position: relative;top: -40px;left: -20px"
                             />
-                        </label>
+                        </label> -->
                     </div>
                 </div>
             </div>
@@ -56,56 +54,24 @@
                         <pre class="code" [hidden]="!showJSON">{{ imageFeatures | json }}</pre>
                         <h4 [hidden]="showJSON">Image Features</h4>
                         <table class="table table-bordered" [hidden]="showJSON">
-                            <tr *ngIf="imageFeatures && imageFeatures.description">
-                                <td class="result-label">Description:</td>
-                                <td>
-                                    <span class="result-description">{{bestDescription().text}}</span>
-                                    <div class="progress">
-                                        <div class="progress-bar progress-bar-info" role="progressbar" [style.width]="(bestDescription().confidence * 100).toString() + '%'">{{bestDescription().confidence | percent:'1.0-0'}}</div>
-                                    </div>
-                                </td>
-                            </tr>
-                            <tr *ngIf="imageFeatures && imageFeatures.color">
-                                <td class="result-label">Dominant background:</td>
-                                <td>
-                                    <div [style.background-color]="imageFeatures.color.dominantColorBackground" class="result-color-box"></div>
-                                </td>
-                            </tr>
-                            <tr *ngIf="imageFeatures && imageFeatures.color">
-                                <td class="result-label">Dominant foreground:</td>
-                                <td>
-                                    <div [style.background-color]="imageFeatures.color.dominantColorForeground" class="result-color-box"></div>
-                                </td>
-                            </tr>
-                            <tr *ngIf="imageFeatures && imageFeatures.color">
-                                <td class="result-label">Accent:</td>
-                                <td>
-                                    <div [style.background-color]="'#'+imageFeatures.color.accentColor" class="result-color-box"></div>
-                                </td>
-                            </tr>
-                            <tr *ngIf="imageFeatures && imageFeatures.tags">
-                                <td class="result-label">High confidence tags:</td>
-                                <td>
-                                    <div>{{highConfidenceTags()}}</div>
-                                </td>
-                            </tr>
-                            <tr *ngIf="imageFeatures && imageFeatures.tags">
-                                <td class="result-label">Low confidence tags:</td>
-                                <td>
-                                    <div>{{lowConfidenceTags()}}</div>
-                                </td>
-                            </tr>
-                            <tr *ngIf="imageFeatures && imageFeatures.Predictions">
-                                <td class="result-label">Predictions:</td>
-                                <td>
-                                    <div *ngFor="let prediction of imageFeatures.Predictions">
-                                        Tag: {{prediction.Tag}}
-                                        <br>
-                                        Probability: {{prediction.Probability | percent}}
-                                        <hr>
-                                    </div>
-                                </td>
-                            </tr>
+                            <thead>
+
+                                <tr>
+                                    <td>Tag</td>
+                                    <td>Probability</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+
+                                <tr *ngFor="let prediction of imageFeatures.Predictions">
+                                    <td style="text-transform: uppercase">
+                                        {{prediction.Tag}}
+                                    </td>
+                                    <td>
+                                        {{prediction.Probability | percent}}
+                                    </td>
+                                </tr>
+                            </tbody>
                         </table>
                     </div>
                 </div>
@@ -119,7 +85,31 @@
         </div>
 
         <br>
+        <div class="row"><br>
+            <h2>What did we learn?</h2>
+            <h3>more training...</h3>
+            <p>Some interesting "statistics:"</p>
+            <ul>
+                <li><strong>The FLASH</strong>: Has a 71% confidence of being <em>SPIDERMAN</em></li>
+                <li><strong>SPIDERMAN</strong>: Has a 10% confidence of being <em>The FLASH</em> and 100% confidence of being a <strong>DC HERO</strong></li>
+                <li><strong>Chris Evans</strong> is <em>WONDER WOMAN</em></li>
+                <li>When <strong>The FLASH</strong> and <strong>SUPERMAN</strong> race, audiences mostly see <em>The Flash</em></li>
+                <li>Dragonball Z's <strong>Goku</strong> is a <em>DC HERO</em></li>
+                <li><strong>SPIDERMAN</strong> holding <strong>CAPTAIN AMERICA'S</strong> shield looks more like Spiderman, than just Spiderman</li>
+                <li><strong>Ben Affleck</strong> looks less like Batman than <strong>Christian Bale</strong></li>
+                
+                <li><strong>JOHN PAPA</strong> is <em>DC</em></li>
+                <ul>
+                    <li><em>(also maybe Superman?)</em></li>
+                </ul>
+            </ul>
+        </div>
+
         <div class="row">
+            <p style="text-align:center">Made by <a href="https://github.com/azanebrain">azanebrain</a> &amp; <a href="https://github.com/golfergeek">golfergeek</a> at the NGConf2018 AI Hackathon hosted by Microsoft</p>
+        </div>
+
+        <!-- <div class="row">
             <h2>Want to build this?</h2>
         </div>
         <div class="row row-size2">
@@ -127,6 +117,6 @@
                 <a class="button button-secondary button-primary" href="https://docs.microsoft.com/en-us/azure/cognitive-services/computer-vision/quickstarts/javascript#AnalyzeImage">
                     Documentation</a>
             </h2>
-        </div>
+        </div> -->
     </div>
 </div>
